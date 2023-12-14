@@ -7,6 +7,6 @@ const myEvent = new EventEmitter()
 
     myEvent.on("greet person", (name, age)=>{console.log(`hello ${name} how are you doing. You are ${age} old`)})
 
-    myEvent.emit("greet")
-    myEvent.emit("question")
-    myEvent.emit("greet person", "David", 25)
+    myEvent.emit("greet")  //calling fxn
+    myEvent.emit("question")  //calling fxn
+    myEvent.emit("greet person", "David", 25) // calling fxn
