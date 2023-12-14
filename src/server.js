@@ -13,11 +13,22 @@ app.get("/about", (req, res) =>{
 
 })
 
-app.get("/contact/:name/:age", (req, res) =>{
+app.get("/contact/:name/:age/:origin", (req, res) =>{
     console.log(req.params)
+    const name = req.params.name;
     const age = parseInt(req.params.age);
+    const origin = req.params.origin;
     //res.send("conatct us @ rose@meta.com")
-    res.send(`This page is the contact page for ${req.params.name},he is ${age} years old`);
+
+    res.json({
+        name,
+        age,
+        origin
+    
+    })
+
+    
+    res.send(`This page is the contact page for ${req.params.name},he is ${age} years old, he is from ${origin} state`);
 
 })
 
